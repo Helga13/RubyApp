@@ -3,9 +3,9 @@ class PagesController < ApplicationController
     @hello = 'Hi there!'
   end
 
-  def course
+  def about
   end
 
-  def testimonials
+  def photographers
   end
 end

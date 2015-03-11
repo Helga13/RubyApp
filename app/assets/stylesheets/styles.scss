@@ -1,0 +1,28 @@
+@import 'bootstrap';
+
+body{
+  background-color: #9E9E9E;
+}
+
+.navbar-inverse {
+  background-color: #595959;
+  border-color: #595959;
+}
+
+.navbar {
+  border-radius: 0;
+  height: 80px;
+}
+
+.nav{
+  width: 30%;
+  padding-top: 20px;
+}
+
+.btn{
+  color: #FFF;
+  background-color: #2B2A2A;
+  border-color: #1D1D1D;
+  border-radius: 0;
+}
+
