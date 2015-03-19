@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CourseApp</title>
+  <title>PhotoLife</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <%= render 'shared/header' %>
-        <div class='container text-center'>
-          <%= yield %>
+    <div class='wrapper'>
+        <div class='over_header'><%= image_tag 'lens.png', height: 100, alt: 'Lens'%>
+            <p><i>
+                <span class='quote'>“</span>
+                    Нет правил хорошей фотографии, есть просто сами хорошие фотографии
+                <span class='quote'>”</span><br>
+                <span>Ансель Адамс</span>
+            </i></p>
         </div>
-
+        <%= render 'shared/header' %>
+            <div class='container text-center'>
+              <%= yield %>
+            </div>
+        <div class='footer'>
+            © Copyright
+        </div>
+    </div>
 </body>
 </html>
