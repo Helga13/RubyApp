@@ -37,6 +37,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Puma install
 gem 'puma'
 
+# Postgres
+gem 'pg'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -50,7 +53,7 @@ end
 
 group :production do
   # Use postgresql as the database for Active Record
-  gem 'pg'
+  #gem 'pg'
   #Heroku integration
   gem 'rails_12factor'
 end
