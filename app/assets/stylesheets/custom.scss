@@ -1,0 +1,9 @@
+.field_with_errors {
+  input, textarea {
+    border-color: red;
+  }
+
+  label {
+    color: red;
+  }
+}
