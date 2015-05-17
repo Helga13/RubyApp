@@ -25,5 +25,7 @@ class TestimonialsController < ApplicationController
   def testimonial_params
     params.require(:testimonial).permit(:user_name, :feedback)
   end
+
 end
+
 
