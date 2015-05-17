@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1>New testimonial</h1>
+</div>
+
+<%= form_for(@testimonial) do |f| %>
+
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+
+    <%= f.label :feedback %>
+    <%= f.text_field :feedback %>
+
+    <%= f.submit 'Create testimonial', class: 'btn btn-large btn-primary' %>
+<% end %>
