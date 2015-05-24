@@ -1,0 +1,29 @@
+<%= form_for @student, html: {class: 'form-horizontal center'} do |f| %>
+
+    <% if @student.errors.any? %>
+        <div class="alert alert-danger">
+          <b><%= pluralize(@student.errors.count, "error") %> on form.</b>
+          <ul>
+            <% @student.errors.full_messages.each do |message| %>
+                <li>* <%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :name, class: 'col-md-4 control-label' %>
+      <div class="col-md-6">
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :github_user, class: 'col-md-4 control-label' %>
+      <div class="col-md-6">
+        <%= f.text_area :github_user, class: 'form-control' %>
+      </div>
+    </div>
+
+    <%= f.submit "#{action_name} student", class: 'btn btn-large btn-primary' %>
+<% end %>

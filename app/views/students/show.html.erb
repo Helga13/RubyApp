@@ -1,8 +1,10 @@
 <div class="page-header">
-  <h2><%= @testimonial.user_name %></h2>
-  <q><%= @testimonial.feedback %></q>
+  <h2><%= @student.name %></h2>
+  <p><%= @student.github_user %></p>
 </div>
+
 <% if session[:mentor_id] %>
+    <%= link_to "edit", edit_student_path(@student), class: 'btn btn-default' %>
     <%= link_to 'delete', @testimonial, method: :delete, class: 'btn btn-danger',
                 data: { confirm: "You sure?" } %>
 <% end %>

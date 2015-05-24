@@ -1,9 +1,18 @@
 <nav class='navbar navbar-inverse'>
-  <ul class='nav navbar-nav pull-right'>
+  <ul class='nav navbar-nav'>
     <li><%= link_to 'Главная', root_path %></li>
     <li><%= link_to 'Фотографы', photographers_path %></li>
     <li><%= link_to 'Статьи', articles_path %></li>
     <li><%= link_to 'О портале', about_path %></li>
     <li><%= link_to 'Отзывы', testimonials_path %></li>
+    <li><%= link_to 'Students', students_path %></li>
   </ul>
+  <% if session[:mentor_id] %>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to 'Admin', mentor_path %></li>
+        <li><%= button_to 'Выход', logout_path, method: :delete, class: 'btn navbar-btn' %></li>
+      </ul>
+  <% else %>
+      <%= link_to 'Вход', login_path, class: 'btn btn-default navbar-btn pull-right' %>
+  <% end %>
 </nav>

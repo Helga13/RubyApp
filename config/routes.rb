@@ -21,7 +21,8 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  resources :testimonials, only: [:index, :new, :show, :create]
+  resources :testimonials, only: [:index, :new, :show, :create, :destroy]
+  resources :students
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
