@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'courses/index'
+
+  get 'courses/show'
+
   root  'pages#home'
 
   # get 'pages/home'
@@ -22,6 +26,8 @@ Rails.application.routes.draw do
   end
 
   resources :testimonials, only: [:index, :new, :show, :create, :destroy]
+  resources :courses, only: [:index, :show]
+
   resources :students
 
   # The priority is based upon order of creation: first created -> highest priority.
