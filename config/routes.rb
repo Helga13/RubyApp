@@ -13,6 +13,14 @@ Rails.application.routes.draw do
   get 'pages/articles'
   get 'articles' => 'pages#articles'
 
+  get 'mentor' => 'mentor#index'
+
+  controller :sessions do
+    get  'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
   resources :testimonials, only: [:index, :new, :show, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
