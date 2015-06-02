@@ -25,7 +25,7 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  resources :testimonials, only: [:index, :new, :show, :create, :destroy]
+  resources :testimonials, only: [:index, :show, :create, :destroy]
   resources :courses, only: [:index, :show]
 
   resources :students

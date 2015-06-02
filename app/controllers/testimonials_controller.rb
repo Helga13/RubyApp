@@ -1,13 +1,11 @@
 class TestimonialsController < ApplicationController
 
+  respond_to :json
+
   before_action :authorize, only: :destroy
 
   def index
-    @testimonials = Testimonial.all
-  end
-
-  def new
-    @testimonial = Testimonial.new
+    @testimonials = Testimonial.order("id DESC").all
   end
 
   def show
@@ -15,17 +13,13 @@ class TestimonialsController < ApplicationController
   end
 
   def create
-    @testimonial = Testimonial.new(testimonial_params)
-    if @testimonial.save
-      redirect_to @testimonial
-    else
-      render 'new'
-    end
+    @testimonial = Testimonial.create(testimonial_params)
+    respond_with @testimonial
+  end
 
-    def destroy
-      Testimonial.find(params[:id]).destroy
-      redirect_to testimonials_url
-    end
+  def destroy
+    Testimonial.find(params[:id]).destroy
+    redirect_to testimonials_url
   end
 
   private
@@ -33,7 +27,8 @@ class TestimonialsController < ApplicationController
   def testimonial_params
     params.require(:testimonial).permit(:user_name, :feedback)
   end
-
 end
+
+
 
 
