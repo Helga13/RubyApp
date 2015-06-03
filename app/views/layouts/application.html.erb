@@ -7,21 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class='wrapper'>
-        <div class='over_header'><%= image_tag 'lens.png', height: 100, alt: 'Lens'%>
-            <p><i>
-                <span class='quote'>“</span>
-                    Нет правил хорошей фотографии, есть просто сами хорошие фотографии
-                <span class='quote'>”</span><br>
-                <span>Ансель Адамс</span>
-            </i></p>
-        </div>
-        <%= render 'shared/header' %>
-            <div class='container text-center'>
+    <%= render 'shared/header' %>
+        <div class='container'>
+            <div class='text-center'>
               <%= yield %>
             </div>
-        <div class='footer'>
+        </div>
+    <div class="footer">
+        <div class='container'>
+          <div class="col-lg-12">
             © Copyright
+          </div>
         </div>
     </div>
 </body>

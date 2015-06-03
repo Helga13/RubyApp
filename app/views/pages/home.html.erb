@@ -1,23 +1,135 @@
-<!--<h1>Pages#home</h1>-->
-<!--<p>Find me in app/views/pages/home.html.erb</p>-->
-<div class='page-header'>
-  <h1><%= @hello %></h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag 'img1.jpg', alt: 'img1' %>
+      <div class="carousel-caption">
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag 'img2.jpg', alt: 'img2' %>
+      <div class="carousel-caption">
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag 'img3.jpg', alt: 'img3' %>
+      <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span>prev</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span>next</span>
+  </a>
+
 </div>
 
-<div class='hero-unit'>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    In et neque at justo congue imperdiet. In faucibus ornare mi nec ultricies.
-    Curabitur eget dolor ex. Etiam tempus orci augue, sed ultricies nunc
-    commodo semper. Sed vel odio faucibus risus mollis ornare.
-    Pellentesque accumsan feugiat magna, sit amet elementum ex ultrices eget.
-    Vestibulum convallis augue laoreet egestas varius. Donec dapibus lacinia
-    metus, sit amet tincidunt purus pellentesque vitae. Maecenas luctus turpis
-    ac eros condimentum, vitae tristique augue accumsan. Nulla efficitur elit
-    vitae nisi tincidunt, ac consectetur metus pretium. Nunc cursus ultrices
-    sem, vel cursus turpis feugiat porta. Vivamus aliquam sed mi non tincidunt.
-    Maecenas sodales eget quam non dictum. Cum sociis natoque penatibus et
-    magnis dis parturient montes, nascetur ridiculus mus. In elementum dignissim
-    lectus, ac rutrum nisl dapibus in. </p>
-  <%= link_to 'Visit course page to learn more...', 'https://github.com/micrum/course',
-              target: '_blank', class: 'btn btn-primary btn-lg' %>
+<div class="col-lg-12">
+  <!--Headline block-->
+  <div class="headline_all">
+    <!--1 col block-->
+      <div class="col-md-12 headline">
+        <p>Headline</p>
+        <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+      </div>
+    </div>
+
+    <!--End of 1 col block-->
+
+    <!--2 equal cols block-->
+      <div class="col-md-6 headline headline_2col_eq">
+        <p>Headline</p>
+        <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+      </div>
+      <div class="col-md-6 headline headline_2col_eq">
+        <p>Headline</p>
+        <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+      </div>
+    <!--End of 2 equal cols block-->
+    </div>
+  </div>
+  <!--End of headline block-->
+
+<div class="col-lg-12 photo-content-header">
+  <span class="popular"><a href="#">Popular</a></span>
+  <span class="latest"><a href="#">Latest</a></span>
 </div>
+<div class="row">
+    <div class="col-lg-3 photo-content-header">
+      <a href="#">
+        <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+        <div class="pic-description">
+          <h4>Ansel Adams</h4>
+        </div>
+      </a>
+    </div>
+  <div class="col-lg-3 photo-content-header">
+    <a href="#">
+      <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+      <div class="pic-description">
+        <h4>Ansel Adams</h4>
+      </div>
+    </a>
+  </div>
+  <div class="col-lg-3 photo-content-header">
+    <a href="#">
+      <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+      <div class="pic-description">
+        <h4>Ansel Adams</h4>
+      </div>
+    </a>
+  </div>
+  <div class="col-lg-3 photo-content-header">
+    <a href="#">
+      <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+      <div class="pic-description">
+        <h4>Ansel Adams</h4>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3 photo-content-header">
+    <a href="#">
+      <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+      <div class="pic-description">
+        <h4>Ansel Adams</h4>
+      </div>
+    </a>
+  </div>
+  <div class="col-lg-3 photo-content-header">
+    <a href="#">
+      <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+      <div class="pic-description">
+        <h4>Ansel Adams</h4>
+      </div>
+    </a>
+  </div>
+  <div class="col-lg-3 photo-content-header">
+    <a href="#">
+      <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+      <div class="pic-description">
+        <h4>Ansel Adams</h4>
+      </div>
+    </a>
+  </div>
+  <div class="col-lg-3 photo-content-header">
+    <a href="#">
+      <%= image_tag 'img1-270-270.jpg', alt: 'img1' %>
+      <div class="pic-description">
+        <h4>Ansel Adams</h4>
+      </div>
+    </a>
+  </div>
+</div>
+
